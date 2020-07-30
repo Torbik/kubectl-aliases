@@ -1,5 +1,28 @@
 # kubectl-aliases
 
+This repository is a fork of [ahmetb/kubectl-aliases](https://github.com/ahmetb/kubectl-aliases) but with aliases for
+the following Kubernetes resources added:
+
+- `statefulset` (shortcut `sts`)
+- `cronjob` (shortcut `cj`)
+- `job` (shortcut `j`)
+- `persistentvolumeclaim` (shortcut `pvc`)
+- `persistentvolume` (shortcut `pv`)
+- `daemonset` (shortcut `ds`)
+- `customresourcedefinition` (shortcut `crd`)
+- `poddisruptionbudgets` (shortcut `pdb`)
+- `podsecuritypolicies` (shortcut `psp`)
+- `endpoint` (shortcut `ep`)
+- `storageclasses` (shortcut `sc`)
+- `serviceaccount` (shortcut `sa`)
+- `role` (shortcut `r`)
+- `rolebinding` (shortcut `rb`)
+- `clusterrole` (shortcut `cr`)
+- `clusterrolebinding` (shortcut `crb`)
+
+All shortcuts above except for `r`, `rb`, `cr`, and `crb` are official short names for appropriate Kubernetes 
+resources.
+
 This repository contains [a script](generate_aliases.py) to generate hundreds of
 convenient shell aliases for kubectl, so you no longer need to spell out every single
 command and --flag over and over again.
@@ -12,7 +35,7 @@ Confused? Read on.
 
 ### Examples
 
-Some of the 800 generated aliases are:
+Some of the 1700 generated aliases are:
 
 ```sh
 alias k='kubectl'
@@ -73,9 +96,12 @@ function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
   * **`ex`**: `exec -i -t`
   * **`lo`**: `logs -f`
 * resources:
-  * **`po`**=pod, **`dep`**=`deployment`, **`ing`**=`ingress`,
-    **`svc`**=`service`, **`cm`**=`configmap`, **`sec`=`secret`**,
-    **`ns`**=`namespace`, **`no`**=`node`
+  * **`po`**=pod, **`dep`**=`deployment`, **`ing`**=`ingress`, **`svc`**=`service`, **`cm`**=`configmap`,
+    **`sec`=`secret`**, **`ns`**=`namespace`, **`no`**=`node`, **`sts`**=`statefulset`, **`cj`**=`cronjob`,
+    **`j`**=`job`, **`pvc`**=`persistentvolumeclaim`, **`pv`**=`persistentvolume`, **`ds`**=`daemonset`,
+    **`crd`**=`customresourcedefinition`, **`pdb`**=`poddisruptionbudgets`, **`psp`**=`podsecuritypolicies`,
+    **`ep`**=`endpoint`, **`sc`**=`storageclasses`, **`sa`**=`serviceaccount`, **`r`**=`role`,
+    **`rb`**=`rolebinding`, **`cr`**=`clusterrole`, **`crb`**=`clusterrolebinding`
 * flags:
   * output format: **`oyaml`**, **`ojson`**, **`owide`**
   * **`all`**: `--all` or `--all-namespaces` depending on the command

@@ -56,6 +56,22 @@ def main():
         ('sec', 'secret', ['g', 'd', 'rm'], None),
         ('no', 'nodes', ['g', 'd'], ['sys']),
         ('ns', 'namespaces', ['g', 'd', 'rm'], ['sys']),
+        ('sts', 'statefulset', ['g', 'd', 'rm'], ['sys']),
+        ('cj', 'cronjob', ['g', 'd', 'rm'], ['sys']),
+        ('j', 'job', ['g', 'd', 'rm'], ['sys']),
+        ('pvc', 'persistentvolumeclaim', ['g', 'd', 'rm'], ['sys']),
+        ('pv', 'persistentvolume', ['g', 'd', 'rm'], ['sys']),
+        ('ds', 'daemonset', ['g', 'd', 'rm'], ['sys']),
+        ('crd', 'customresourcedefinition', ['g', 'd', 'rm'], None),
+        ('pdb', 'poddisruptionbudgets', ['g', 'd', 'rm'], ['sys']),
+        ('psp', 'podsecuritypolicies', ['g', 'd', 'rm'], None),
+        ('ep', 'endpoint', ['g', 'd', 'rm'], ['sys']),
+        ('sc', 'storageclasses', ['g', 'd', 'rm'], None),
+        ('sa', 'serviceaccount', ['g', 'd', 'rm'], ['sys']),
+        ('r', 'role', ['g', 'd', 'rm'], ['sys']),
+        ('rb', 'rolebinding', ['g', 'd', 'rm'], ['sys']),
+        ('cr', 'clusterrole', ['g', 'd', 'rm'], None),
+        ('crb', 'clusterrolebinding', ['g', 'd', 'rm'], None),
         ]
     res_types = [r[0] for r in res]
 

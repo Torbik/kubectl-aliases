@@ -23,6 +23,8 @@ the following Kubernetes resources added:
 All shortcuts above except for `r`, `rb`, `cr`, and `crb` are official short names for appropriate Kubernetes 
 resources.
 
+Also, added `e` shortcut for `edit` command. For example, `kedep test` means `kubectl edit deployment test`.
+
 This repository contains [a script](generate_aliases.py) to generate hundreds of
 convenient shell aliases for kubectl, so you no longer need to spell out every single
 command and --flag over and over again.
@@ -95,6 +97,7 @@ function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
   * **`k`**:`kustomize`
   * **`ex`**: `exec -i -t`
   * **`lo`**: `logs -f`
+  * **`e`**: `edit`
 * resources:
   * **`po`**=pod, **`dep`**=`deployment`, **`ing`**=`ingress`, **`svc`**=`service`, **`cm`**=`configmap`,
     **`sec`=`secret`**, **`ns`**=`namespace`, **`no`**=`node`, **`sts`**=`statefulset`, **`cj`**=`cronjob`,
